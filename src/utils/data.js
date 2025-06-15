@@ -19,24 +19,24 @@ export const navLinks = [
 
 export const socials = [
   {
-    name: "Facebook",
-    link: "",
+    name: "Tiktok",
+    link: "https://www.tiktok.com/@imperiaconsulting_?_t=ZM-8xDy8z54Pry&_r=1",
   },
   {
     name: "Instagram",
-    link: "",
+    link: "https://www.instagram.com/imperiaconsulting_?igsh=MWlieG1ocTRqNDNydg%3D%3D&utm_source=qr",
   },
-  {
-    name: "LinkedIn",
-    link: "",
-  },
-  {
-    name: "TikTok",
-    link: "",
-  },
+  // {
+  //   name: "LinkedIn",
+  //   link: "",
+  // },
+  // {
+  //   name: "TikTok",
+  //   link: "",
+  // },
   {
     name: "X",
-    link: "",
+    link: "https://x.com/imperiac_?s=11",
   },
 ];
 import { hero1, hero2, hero3, hero4 } from "../assets";
