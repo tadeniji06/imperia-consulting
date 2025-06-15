@@ -68,13 +68,13 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div 
-          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
-          onClick={closeMobileMenu}
-        />
-      )}
+      {/* Smooth Overlay Fix */}
+      <div 
+        className={`fixed inset-0 bg-black transition-opacity duration-300 lg:hidden z-40 ${
+          isMobileMenuOpen ? "opacity-50 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={closeMobileMenu}
+      />
 
       {/* Mobile Menu */}
       <div 

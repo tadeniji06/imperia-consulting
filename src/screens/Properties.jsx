@@ -7,7 +7,7 @@ const Properties = () => {
     <>
       <PropsHero />
       <PropsNav />
-      <PropsFacilities />
+      {/* <PropsFacilities /> */}
       <ReadyCTA />
     </>
   );
