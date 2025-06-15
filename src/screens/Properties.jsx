@@ -1,6 +1,15 @@
+import PropsHero from "../components/properties/PropsHero";
+import PropsNav from "../components/properties/PropsNav";
+import PropsFacilities from "../components/properties/PropsFacilities";
+import ReadyCTA from "../components/about/ReadyCTA";
 const Properties = () => {
   return (
-    <div>Properties</div>
-  )
-}
-export default Properties
+    <>
+      <PropsHero />
+      <PropsNav />
+      <PropsFacilities />
+      <ReadyCTA />
+    </>
+  );
+};
+export default Properties;

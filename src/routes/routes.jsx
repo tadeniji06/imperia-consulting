@@ -5,7 +5,7 @@ import About from "../screens/About";
 import Properties from "../screens/Properties";
 import Contact from "../screens/Contact";
 import NotFound from "../screens/NotFound";
-
+import ViewProperty from "../components/properties/ViewProperty";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/properties",
         element: <Properties />,
+      },
+      {
+        path: "/property/:id",
+        element: <ViewProperty />,
       },
       {
         path: "/contact",

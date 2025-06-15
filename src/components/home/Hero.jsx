@@ -46,33 +46,39 @@ const Hero = () => {
     const [imageError, setImageError] = useState(false);
 
     return (
-      <div className="relative h-full w-full">
+      <div className='relative h-full w-full'>
         {!imageError ? (
           <img
             src={slide.img}
             alt={slide.title}
-            className="h-full w-full object-cover"
+            className='h-full w-full object-cover'
             onError={() => setImageError(true)}
-            loading={index === 0 ? 'eager' : 'lazy'}
+            loading={index === 0 ? "eager" : "lazy"}
           />
         ) : (
-          <div className={`h-full w-full bg-gradient-to-br ${slide.bgGradient || 'from-gray-800 to-gray-900'}`}>
-            <div className="flex items-center justify-center h-full text-white/60">
-              <Icon icon="mdi:image-broken" className="w-16 h-16" />
+          <div
+            className={`h-full w-full bg-gradient-to-br ${
+              slide.bgGradient || "from-gray-800 to-gray-900"
+            }`}
+          >
+            <div className='flex items-center justify-center h-full text-white/60'>
+              <Icon icon='mdi:image-broken' className='w-16 h-16' />
             </div>
           </div>
         )}
 
         {/* Dynamic Gradient Overlay */}
-        <div className={`absolute inset-0 bg-gradient-to-br ${slide.bgGradient} backdrop-blur-[0.5px]`} />
-        
+        <div
+          className={`absolute inset-0 bg-gradient-to-br ${slide.bgGradient} backdrop-blur-[0.5px]`}
+        />
+
         {/* Simplified Animated Particles */}
         {isActive && (
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className='absolute inset-0 overflow-hidden pointer-events-none'>
             {[...Array(4)].map((_, i) => (
               <motion.div
                 key={`particle-${currentSlide}-${i}`}
-                className="absolute w-1 h-1 bg-white/20 rounded-full"
+                className='absolute w-1 h-1 bg-white/20 rounded-full'
                 initial={{
                   x: -20,
                   y: Math.random() * 100 + "%",
@@ -96,19 +102,19 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className='relative h-screen overflow-hidden'>
       {/* Background Images */}
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode='wait'>
         <motion.div
           key={currentSlide}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="absolute inset-0 z-0"
+          className='absolute inset-0 z-0'
         >
-          <SlideImage 
-            slide={slides[currentSlide]} 
+          <SlideImage
+            slide={slides[currentSlide]}
             index={currentSlide}
             isActive={true}
           />
@@ -116,27 +122,29 @@ const Hero = () => {
       </AnimatePresence>
 
       {/* Main Content */}
-      <div className="relative z-10 h-full flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 items-center h-full">
-            
+      <div className='relative z-10 h-full flex items-center'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full'>
+          <div className='grid lg:grid-cols-2 gap-12 items-center h-full'>
             {/* Text Content */}
             <motion.div
               key={`content-${currentSlide}`}
               initial={{ x: -30, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="text-white space-y-6 md:space-y-8"
+              className='text-white space-y-6 md:space-y-8'
             >
               {/* Accent Badge */}
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.1 }}
-                className="inline-block"
+                className='inline-block'
               >
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-white/20 backdrop-blur-sm border border-white/30">
-                  <Icon icon="mdi:star" className="w-4 h-4 mr-2 text-yellow-400" />
+                <span className='inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-white/20 backdrop-blur-sm border border-white/30'>
+                  <Icon
+                    icon='mdi:star'
+                    className='w-4 h-4 mr-2 text-yellow-400'
+                  />
                   {slides[currentSlide].accent}
                 </span>
               </motion.div>
@@ -146,9 +154,9 @@ const Hero = () => {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight"
+                className='text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight'
               >
-                <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                <span className='bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent'>
                   {slides[currentSlide].title}
                 </span>
               </motion.h1>
@@ -158,7 +166,7 @@ const Hero = () => {
                 initial={{ y: 15, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-base sm:text-lg lg:text-xl text-gray-100 max-w-2xl leading-relaxed"
+                className='text-base sm:text-lg lg:text-xl text-gray-100 max-w-2xl leading-relaxed'
               >
                 {slides[currentSlide].body}
               </motion.p>
@@ -168,16 +176,20 @@ const Hero = () => {
                 initial={{ y: 15, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="flex flex-col sm:flex-row gap-4 pt-4"
+                className='flex flex-col sm:flex-row gap-4 pt-4'
               >
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 25,
+                  }}
                 >
                   <Button
-                    title="Buy Now"
-                    className="px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-white/25"
+                    title='Buy Now'
+                    className='px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-white/25'
                   />
                 </motion.div>
               </motion.div>
@@ -188,30 +200,47 @@ const Hero = () => {
               initial={{ x: 30, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="hidden lg:flex justify-center items-center"
+              className='hidden lg:flex justify-center items-center'
             >
-              <div className="relative">
+              <div className='relative'>
                 {/* Floating Stats Cards */}
                 <motion.div
                   animate={{ y: [-6, 6, -6] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-16 -left-16 bg-white/15 backdrop-blur-md p-4 lg:p-6 rounded-2xl border border-white/20"
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  className='absolute -top-16 -left-16 bg-white/15 backdrop-blur-md p-4 lg:p-6 rounded-2xl border border-white/20'
                 >
-                  <div className="text-2xl lg:text-3xl font-bold text-white">12%</div>
-                  <div className="text-xs lg:text-sm text-gray-200">Annual Returns</div>
+                  <div className='text-2xl lg:text-3xl font-bold text-white'>
+                    12%
+                  </div>
+                  <div className='text-xs lg:text-sm text-gray-200'>
+                    Annual Returns
+                  </div>
                 </motion.div>
 
                 <motion.div
                   animate={{ y: [6, -6, 6] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -bottom-16 -right-16 bg-white/15 backdrop-blur-md p-4 lg:p-6 rounded-2xl border border-white/20"
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1,
+                  }}
+                  className='absolute -bottom-16 -right-16 bg-white/15 backdrop-blur-md p-4 lg:p-6 rounded-2xl border border-white/20'
                 >
-                  <div className="text-2xl lg:text-3xl font-bold text-white">5+</div>
-                  <div className="text-xs lg:text-sm text-gray-200">Years Experience</div>
+                  <div className='text-2xl lg:text-3xl font-bold text-white'>
+                    5+
+                  </div>
+                  <div className='text-xs lg:text-sm text-gray-200'>
+                    Years Experience
+                  </div>
                 </motion.div>
 
                 {/* Central Glow Effect */}
-                <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full bg-gradient-to-r from-blue-400/20 to-purple-400/20 backdrop-blur-3xl" />
+                <div className='w-64 h-64 lg:w-80 lg:h-80 rounded-full bg-gradient-to-r from-blue-400/20 to-purple-400/20 backdrop-blur-3xl' />
               </div>
             </motion.div>
           </div>
@@ -219,20 +248,23 @@ const Hero = () => {
       </div>
 
       {/* Navigation Controls */}
-      <div className="absolute bottom-6 lg:bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="flex items-center space-x-4 lg:space-x-6">
+      <div className='absolute bottom-6 lg:bottom-8 left-1/2 transform -translate-x-1/2 z-20'>
+        <div className='flex items-center space-x-4 lg:space-x-6'>
           {/* Previous Button */}
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={prevSlide}
-            className="p-2 lg:p-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30 transition-all duration-300"
+            className='p-2 lg:p-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30 transition-all duration-300'
           >
-            <Icon icon="mdi:chevron-left" className="w-5 h-5 lg:w-6 lg:h-6" />
+            <Icon
+              icon='mdi:chevron-left'
+              className='w-5 h-5 lg:w-6 lg:h-6'
+            />
           </motion.button>
 
           {/* Slide Indicators */}
-          <div className="flex space-x-2 lg:space-x-3">
+          <div className='flex space-x-2 lg:space-x-3'>
             {slides.map((_, index) => (
               <motion.button
                 key={index}
@@ -247,9 +279,13 @@ const Hero = () => {
               >
                 {currentSlide === index && (
                   <motion.div
-                    layoutId="activeIndicator"
-                    className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-purple-400"
-                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                    layoutId='activeIndicator'
+                    className='absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-purple-400'
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 30,
+                    }}
                   />
                 )}
               </motion.button>
@@ -261,22 +297,25 @@ const Hero = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={nextSlide}
-            className="p-2 lg:p-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30 transition-all duration-300"
+            className='p-2 lg:p-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30 transition-all duration-300'
           >
-            <Icon icon="mdi:chevron-right" className="w-5 h-5 lg:w-6 lg:h-6" />
+            <Icon
+              icon='mdi:chevron-right'
+              className='w-5 h-5 lg:w-6 lg:h-6'
+            />
           </motion.button>
         </div>
       </div>
 
       {/* Progress Bar */}
       {isAutoPlaying && (
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-20">
+        <div className='absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-20'>
           <motion.div
             key={currentSlide}
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
             transition={{ duration: 6, ease: "linear" }}
-            className="h-full bg-gradient-to-r from-blue-400 to-purple-400"
+            className='h-full bg-gradient-to-r from-blue-400 to-purple-400'
           />
         </div>
       )}
