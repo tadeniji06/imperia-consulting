@@ -136,7 +136,7 @@ export const oakOneBed = [
 ];
 export const oakOneBedPlusStudy = [
   {
-    id: "oak-1-bedroom-study",
+    id: "oak-1-study",
     title: "1 BEDROOM APARTMENT PLUS STUDY",
     mainImg: o1main,
     photos: [o11, o12, o13, o14],

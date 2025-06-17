@@ -6,6 +6,7 @@ import {
   oakOneBed,
   oakTwoBed,
   oakThreeBed,
+ oakOneBedPlusStudy,
 } from "../../utils/listings";
 
 const ViewProperty = () => {
@@ -20,6 +21,7 @@ const ViewProperty = () => {
       ...oakOneBed,
       ...oakTwoBed,
       ...oakThreeBed,
+      ...oakOneBedPlusStudy,
     ];
 
     const found = allProperties.find((item) => item.id === id);
