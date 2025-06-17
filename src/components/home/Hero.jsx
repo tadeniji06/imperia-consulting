@@ -67,9 +67,12 @@ const Hero = () => {
           </div>
         )}
 
+        {/* Enhanced Dark Overlay for Better Text Readability */}
+        <div className='absolute inset-0 bg-black/60' />
+        
         {/* Dynamic Gradient Overlay */}
         <div
-          className={`absolute inset-0 bg-gradient-to-br ${slide.bgGradient} backdrop-blur-[0.5px]`}
+          className={`absolute inset-0 bg-gradient-to-br ${slide.bgGradient} opacity-40`}
         />
 
         {/* Simplified Animated Particles */}
@@ -140,7 +143,7 @@ const Hero = () => {
                 transition={{ duration: 0.3, delay: 0.1 }}
                 className='inline-block'
               >
-                <span className='inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-white/20 backdrop-blur-sm border border-white/30'>
+                <span className='inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-black/40 backdrop-blur-sm border border-white/30 text-white'>
                   <Icon
                     icon='mdi:star'
                     className='w-4 h-4 mr-2 text-yellow-400'
@@ -156,7 +159,7 @@ const Hero = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className='text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight'
               >
-                <span className='bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent'>
+                <span className='text-white drop-shadow-2xl'>
                   {slides[currentSlide].title}
                 </span>
               </motion.h1>
@@ -166,7 +169,7 @@ const Hero = () => {
                 initial={{ y: 15, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className='text-base sm:text-lg lg:text-xl text-gray-100 max-w-2xl leading-relaxed'
+                className='text-base sm:text-lg lg:text-xl text-gray-100 max-w-2xl leading-relaxed drop-shadow-lg'
               >
                 {slides[currentSlide].body}
               </motion.p>
@@ -195,14 +198,14 @@ const Hero = () => {
               </motion.div>
             </motion.div>
 
-            {/* Visual Elements */}
+            {/* Visual Elements - Removed Large Circle */}
             <motion.div
               initial={{ x: 30, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className='hidden lg:flex justify-center items-center'
             >
-              <div className='relative'>
+              <div className='relative w-64 h-64 lg:w-80 lg:h-80'>
                 {/* Floating Stats Cards */}
                 <motion.div
                   animate={{ y: [-6, 6, -6] }}
@@ -211,7 +214,7 @@ const Hero = () => {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className='absolute -top-16 -left-16 bg-white/15 backdrop-blur-md p-4 lg:p-6 rounded-2xl border border-white/20'
+                  className='absolute -top-8 -left-8 bg-black/50 backdrop-blur-md p-4 lg:p-6 rounded-2xl border border-white/20 shadow-2xl'
                 >
                   <div className='text-2xl lg:text-3xl font-bold text-white'>
                     12%
@@ -229,7 +232,7 @@ const Hero = () => {
                     ease: "easeInOut",
                     delay: 1,
                   }}
-                  className='absolute -bottom-16 -right-16 bg-white/15 backdrop-blur-md p-4 lg:p-6 rounded-2xl border border-white/20'
+                  className='absolute -bottom-8 -right-8 bg-black/50 backdrop-blur-md p-4 lg:p-6 rounded-2xl border border-white/20 shadow-2xl'
                 >
                   <div className='text-2xl lg:text-3xl font-bold text-white'>
                     5+
@@ -239,8 +242,11 @@ const Hero = () => {
                   </div>
                 </motion.div>
 
-                {/* Central Glow Effect */}
-                <div className='w-64 h-64 lg:w-80 lg:h-80 rounded-full bg-gradient-to-r from-blue-400/20 to-purple-400/20 backdrop-blur-3xl' />
+                {/* Subtle Geometric Shape Instead of Large Circle */}
+                <div className='absolute inset-0 flex items-center justify-center'>
+                  <div className='w-32 h-32 lg:w-40 lg:h-40 border-2 border-white/20 rounded-full animate-pulse' />
+                  <div className='absolute w-16 h-16 lg:w-20 lg:h-20 border border-white/30 rounded-full animate-ping' />
+                </div>
               </div>
             </motion.div>
           </div>
@@ -255,7 +261,7 @@ const Hero = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={prevSlide}
-            className='p-2 lg:p-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30 transition-all duration-300'
+            className='p-2 lg:p-3 rounded-full bg-black/40 backdrop-blur-sm border border-white/30 text-white hover:bg-black/60 transition-all duration-300'
           >
             <Icon
               icon='mdi:chevron-left'
@@ -297,7 +303,7 @@ const Hero = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={nextSlide}
-            className='p-2 lg:p-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30 transition-all duration-300'
+            className='p-2 lg:p-3 rounded-full bg-black/40 backdrop-blur-sm border border-white/30 text-white hover:bg-black/60 transition-all duration-300'
           >
             <Icon
               icon='mdi:chevron-right'

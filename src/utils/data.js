@@ -20,22 +20,17 @@ export const navLinks = [
 export const socials = [
   {
     name: "Tiktok",
+    icon: "ic:baseline-tiktok",
     link: "https://www.tiktok.com/@imperiaconsulting_?_t=ZM-8xDy8z54Pry&_r=1",
   },
   {
     name: "Instagram",
+    icon:"mdi:instagram",
     link: "https://www.instagram.com/imperiaconsulting_?igsh=MWlieG1ocTRqNDNydg%3D%3D&utm_source=qr",
   },
-  // {
-  //   name: "LinkedIn",
-  //   link: "",
-  // },
-  // {
-  //   name: "TikTok",
-  //   link: "",
-  // },
   {
     name: "X",
+    icon:"pajamas:twitter",
     link: "https://x.com/imperiac_?s=11",
   },
 ];
@@ -85,7 +80,7 @@ export const offers = [
   {
     title: "24/7 Security & CCTV",
     icon: "wpf:security-checked",
-    desc: `At Oak West, your safety isn’t just a feature, it’s a foundation. Our estate is fully secured with round-the-clock professional security personnel stationed at all access points, supported by a network of advanced CCTV cameras strategically placed throughout the property. From entry gates to common areas and walkways, every corner is under intelligent surveillance to deter threats and ensure swift response to any unusual activity.`,
+    desc: `Our projects are full secured. With round-the-clock professional security personnel stationed at all access points, supported by a network of advanced CCTV cameras strategically placed throughout the property. From entry gates to common areas and walkways, every corner is under intelligent surveillance to deter threats and ensure swift response to any unusual activity.`,
   },
   {
     title: "Flexible Payment Option",

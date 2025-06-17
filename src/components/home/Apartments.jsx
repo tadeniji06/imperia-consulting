@@ -29,7 +29,7 @@ const Apartments = () => {
       
       <div className='mt-3 sm:mt-4'>
         <p className='text-sm sm:text-base text-gray-600 leading-relaxed'>
-          Explore handpicked estates and apartments designed for luxury,
+          Explore handpicked project developments and apartments designed for luxury,
           comfort, and long-term value.
         </p>
       </div>

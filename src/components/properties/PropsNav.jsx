@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   emeraldOneBed,
   emeraldTwoBed,
+  oakOneBedPlusStudy,
   oakOneBed,
   oakTwoBed,
   oakThreeBed,
@@ -15,7 +16,7 @@ const PropsNav = () => {
 
   // Combine listings by property type
   const emeraldListings = [...emeraldOneBed, ...emeraldTwoBed];
-  const oakListings = [...oakOneBed, ...oakTwoBed, ...oakThreeBed];
+  const oakListings = [...oakOneBed,...oakOneBedPlusStudy, ...oakTwoBed, ...oakThreeBed];
 
   return (
     <>
@@ -85,7 +86,7 @@ const PropsNav = () => {
                 />
                 <h3 className='text-lg sm:text-xl font-semibold mb-2'>
                   {apartment.title} (
-                  {activeProperty === "emerald" ? "Emerald" : "Oak West"})
+                  {activeProperty === "emerald" ? "Emerald" : "Oak"})
                 </h3>
                 <p className='text-gray-600 mb-2 text-sm sm:text-base font-medium'>
                   {apartment.avgPrice}

@@ -109,7 +109,7 @@ const Featured = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            Explore handpicked estates and apartments designed for luxury,
+            Explore handpicked project developments and apartments designed for luxury,
             comfort, and long-term value.
           </motion.p>
         </div>

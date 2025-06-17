@@ -33,14 +33,14 @@ import {
 export const featured = [
   {
     img: eme,
-    title: "EMERALD SPRINGS APARTMENT",
-    desc: "Flexible payment of up to 30 months",
+    title: "EMERALD SPRINGS",
+    desc: "Flexible payment plan until completion October, 2026",
     location: "Westland, Nairobi",
   },
   {
     img: oak,
-    title: "OAK WEST RESIDENCY",
-    desc: "Flexible payment of up to 30 months",
+    title: "OAK WEST",
+    desc: "Flexible payment plan until completion November, 2027",
     location: "Westland, Nairobi",
   },
 ];
@@ -54,7 +54,7 @@ export const emeraldOneBed = [
     photos: [e11, e12, e13, e14],
     desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
     location: "Westland, Nairobi, kenya",
-    avgPrice: "9.28M KSH ($72,000)",
+    avgPrice: "7.8M KSH ($64,000)",
     highlights: [
       "Flexible payment plans",
       "Prime locations",
@@ -77,7 +77,7 @@ export const emeraldTwoBed = [
     photos: [e21, e22, e23, e24],
     desc: "Spacious and elegantly designed, this two-bedroom apartment offers the perfect balance of privacy and shared living, ideal for small families, young professionals, or savvy investors.",
     location: "Westland, Nairobi, kenya",
-    avgPrice: "15.2M KSH ($120,000)",
+    avgPrice: "12.9M KSH ($100,000)",
     highlights: [
       "Flexible payment plans",
       "Prime locations",
@@ -99,7 +99,7 @@ export const oakOneBed = [
     photos: [o11, o12, o13, o14],
     desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
     location: "Westland, Nairobi, kenya",
-    avgPrice: "1 bedroom (58 SQM) - 8.1M KSH",
+    avgPrice: "1 bedroom (58 SQM) - 8.1M KSH($61,000)",
     highlights: [
       "Flexible payment plans",
       "Prime locations",
@@ -121,6 +121,39 @@ export const oakOneBed = [
           "20% - 1,760,000 (upon completion November 2027)",
         ],
       },
+      // {
+      //   title: "1 BEDROOM APARTMENT PLUS STUDY",
+      //   price: "8.8M KSH",
+      //   installmentPlan: [
+      //     "30% - 2,640,000 (deposit)",
+      //     "12.5% - 1,100,000 (6 months)",
+      //     "12.5% - 1,100,000 (12 months)",
+      //     "20% - 1,760,000 (upon completion November 2027)",
+      //   ],
+      // },
+    ],
+  },
+];
+export const oakOneBedPlusStudy = [
+  {
+    id: "oak-1-bedroom-study",
+    title: "1 BEDROOM APARTMENT PLUS STUDY",
+    mainImg: o1main,
+    photos: [o11, o12, o13, o14],
+    desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
+    location: "Westland, Nairobi, kenya",
+    avgPrice: "1 bedroom (58 SQM) - 8.8M KSH($68,000)",
+    highlights: [
+      "Flexible payment plans",
+      "Prime locations",
+      "Modern Interiors",
+      "Secure Environment",
+      "Family-friendly amenities",
+      "12% annual ROI",
+      "24/7 security",
+      "25 floors of modern living",
+    ],
+    pricingPlan: [
       {
         title: "1 BEDROOM APARTMENT PLUS STUDY",
         price: "8.8M KSH",
@@ -143,7 +176,7 @@ export const oakTwoBed = [
     photos: [o21, o22, o23, o24],
     desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
     location: "Westland, Nairobi, kenya",
-    avgPrice: "KSH 12.7M ($100,000)",
+    avgPrice: "2 bedroom (105 SQM) - KSH 14.1M ($110,000)",
     highlights: [
       "Flexible payment plans",
       "Prime locations",
@@ -157,7 +190,7 @@ export const oakTwoBed = [
     pricingPlan: [
       {
         title: "2 BEDROOM FLOOR 12 TO 19",
-        price: "14.7M KSH",
+        price: "14.1M KSH",
         installmentPlan: [
           "20% - 2,940,000 (deposit)",
           "15% - 2,205,000 (6 months)",
@@ -165,16 +198,16 @@ export const oakTwoBed = [
           "20% - 2,940,000 (upon completion November 2027)",
         ],
       },
-      {
-        title: "2 BEDROOM FLOOR 12 TO 19",
-        price: "14.7M KSH",
-        installmentPlan: [
-          "20% - 2,940,000 (deposit)",
-          "15% - 2,205,000 (6 months)",
-          "15% - 2,205,000 (12 months)",
-          "20% - 2,940,000 (upon completion November 2027)",
-        ],
-      },
+      // {
+      //   title: "2 BEDROOM FLOOR 12 TO 19",
+      //   price: "14.7M KSH",
+      //   installmentPlan: [
+      //     "20% - 2,940,000 (deposit)",
+      //     "15% - 2,205,000 (6 months)",
+      //     "15% - 2,205,000 (12 months)",
+      //     "20% - 2,940,000 (upon completion November 2027)",
+      //   ],
+      // },
     ],
   },
 ];
@@ -187,7 +220,7 @@ export const oakThreeBed = [
     photos: [o31, o32, o33, o34],
     desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
     location: "Westland, Nairobi, kenya",
-    avgPrice: "KSH 20.2M ($160,000)",
+    avgPrice: "3 bedroom(150 SQM) 19.5M KSH ($152,000)",
     highlights: [
       "Flexible payment plans",
       "Prime locations",
@@ -201,7 +234,7 @@ export const oakThreeBed = [
     pricingPlan: [
       {
         title: "3 BEDROOM FLOOR 12 TO 19",
-        price: "20.2M KSH",
+        price: "19.5M KSH",
         installmentPlan: [
           "20% - 4,040,000 (deposit)",
           "15% - 3,030,000 (6 months)",
@@ -209,16 +242,16 @@ export const oakThreeBed = [
           "20% - 4,040,000 (upon completion November 2027)",
         ],
       },
-      {
-        title: "3 BEDROOM FLOOR 12 TO 19",
-        price: "20.2M KSH",
-        installmentPlan: [
-          "20% - 4,040,000 (deposit)",
-          "15% - 3,030,000 (6 months)",
-          "15% - 3,030,000 (12 months)",
-          "20% - 4,040,000 (upon completion November 2027)",
-        ],
-      },
+      // {
+      //   title: "3 BEDROOM FLOOR 12 TO 19",
+      //   price: "20.2M KSH",
+      //   installmentPlan: [
+      //     "20% - 4,040,000 (deposit)",
+      //     "15% - 3,030,000 (6 months)",
+      //     "15% - 3,030,000 (12 months)",
+      //     "20% - 4,040,000 (upon completion November 2027)",
+      //   ],
+      // },
     ],
   },
 ];
