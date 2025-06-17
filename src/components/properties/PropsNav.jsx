@@ -48,7 +48,7 @@ const PropsNav = () => {
               }`}
               style={{ WebkitTapHighlightColor: "transparent" }}
             >
-              Oak Apartments
+              Oak West
             </button>
           </div>
         </div>
@@ -58,7 +58,7 @@ const PropsNav = () => {
           <span className='text-xl sm:text-2xl font-semibold'>
             {activeProperty === "emerald"
               ? "Emerald Apartments"
-              : "Oak West Apartments"}
+              : "Oak West"}
           </span>
 
           <p className='text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl'>
