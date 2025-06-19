@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../ui/Button";
+import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { slides } from "../../utils/data";
 
@@ -190,10 +191,12 @@ const Hero = () => {
                     damping: 25,
                   }}
                 >
-                  <Button
-                    title='Buy Now'
-                    className='px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-white/25'
-                  />
+                  <Link to={'/properties'}>
+                    <Button
+                      title='Buy Now'
+                      className='px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-white/25'
+                    />
+                  </Link>
                 </motion.div>
               </motion.div>
             </motion.div>

@@ -48,10 +48,12 @@ const Header = () => {
 
         {/* Desktop CTA Button */}
         <div className="hidden lg:block">
-          <Button 
-            className="py-3 px-6 xl:py-4 xl:px-8" 
-            title="Get Started" 
-          />
+         <Link to='/properties'>
+            <Button 
+              className="py-3 px-6 xl:py-4 xl:px-8" 
+              title="Get Started" 
+            />
+         </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -114,11 +116,13 @@ const Header = () => {
 
           {/* Mobile CTA Button */}
           <div className="p-4 border-t bg-gray-50">
-            <Button 
-              className="w-full py-3 px-6 text-center" 
-              title="Get Started" 
-              onClick={closeMobileMenu}
-            />
+          <Link to='/properties'>
+              <Button 
+                className="w-full py-3 px-6 text-center" 
+                title="Get Started" 
+                onClick={closeMobileMenu}
+              />
+          </Link>
           </div>
         </div>
       </div>
