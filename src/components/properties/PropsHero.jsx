@@ -21,7 +21,7 @@ const PropsHero = () => {
               Nested in the heart of Westland, Nairobi, Kenya <br />
               Enjoy up to 30 months installment payment plan
             </p>
-            <Button title={"Buy Now"} className={"py-4 px-10"} />
+            {/* <Button title={"Buy Now"} className={"py-4 px-10"} /> */}
           </div>
         </div>
       </div>
