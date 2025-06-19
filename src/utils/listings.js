@@ -224,7 +224,7 @@ export const oakThreeBed = [
     photos: [o31, o3p, o32, o34],
     desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
     location: "Westland, Nairobi, kenya",
-    avgPrice: "3 bedroom(150 SQM) 19.5M KSH ($152,000)",
+    avgPrice: "3 bedroom(150 SQM) 16.9M KSH ($132,000)",
     highlights: [
       "Flexible payment plans",
       "Prime locations",
@@ -238,12 +238,12 @@ export const oakThreeBed = [
     pricingPlan: [
       {
         title: "3 BEDROOM FLOOR 12 TO 19",
-        price: "19.5M KSH",
+        price: "16.9M KSH",
         installmentPlan: [
-          "20% - 4,040,000 (deposit)",
-          "15% - 3,030,000 (6 months)",
-          "15% - 3,030,000 (12 months)",
-          "20% - 4,040,000 (upon completion November 2027)",
+          "30% - 5,070,000 KSH  (deposit)",
+          "50℅ - spread equally at 2,112,500 KH every 6 months (4 installments)",
+ 
+          "20% - 3,380,000 KSH (upon completion in November 2027)",
         ],
       },
       // {
