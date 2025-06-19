@@ -120,7 +120,7 @@ const ViewProperty = () => {
                 </p>
                 <ul className='list-disc pl-5 space-y-2 text-gray-600'>
                   {plan.installmentPlan.map((step, i) => (
-                    <li key={i} className='text-sm'>
+                    <li key={i} className='text-lg font-semibold'>
                       {step}
                     </li>
                   ))}

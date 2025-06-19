@@ -193,7 +193,7 @@ export const oakTwoBed = [
     ],
     pricingPlan: [
       {
-        title: "2 BEDROOM FLOOR 12 TO 19",
+        // title: "2 BEDROOM FLOOR 12 TO 19",
         price: "14.1M KSH",
         installmentPlan: [
           "20% - 2,940,000 (deposit)",
@@ -237,13 +237,12 @@ export const oakThreeBed = [
     ],
     pricingPlan: [
       {
-        title: "3 BEDROOM FLOOR 12 TO 19",
+        // title: "3 BEDROOM FLOOR 12 TO 19",
         price: "19.5M KSH",
         installmentPlan: [
-          "20% - 4,040,000 (deposit)",
-          "15% - 3,030,000 (6 months)",
-          "15% - 3,030,000 (12 months)",
-          "20% - 4,040,000 (upon completion November 2027)",
+          "30% - 5,070,000 (deposit)",
+          "50% - spread equally at 2,112,500 KSH every 6 months for 4 installments",
+          "20% - 3,380,000 (upon completion in November 2027)",
         ],
       },
       // {
