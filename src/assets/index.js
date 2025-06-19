@@ -39,8 +39,10 @@ import o31 from "./images/oak/threebed/o31.jpg";
 import o32 from "./images/oak/threebed/o32.jpg";
 import o33 from "./images/oak/threebed/o33.jpg";
 import o34 from "./images/oak/threebed/o34.jpg";
+import o3p from "./images/oak/threebed/o3p.jpeg";
 
 import gym from "./images/gym.jpg";
+import o1p from "./images/o1p.jpeg";
 import pool from "./images/pool.jpg";
 import golf from "./images/golf.jpg";
 import kids from "./images/kids.jpg";
@@ -49,6 +51,8 @@ import conf from "./images/conf.jpg";
 import roof from "./images/roof.jpg";
 export {
   o3main,
+  o1p,
+  o3p,
   gym,
   cafe,
   roof,
