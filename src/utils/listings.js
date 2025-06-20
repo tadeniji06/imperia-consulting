@@ -237,12 +237,11 @@ export const oakThreeBed = [
     ],
     pricingPlan: [
       {
-        title: "3 BEDROOM FLOOR 12 TO 19",
+        // title: "3 BEDROOM FLOOR 12 TO 19",
         price: "16.9M KSH",
         installmentPlan: [
           "30% - 5,070,000 KSH  (deposit)",
           "50℅ - spread equally at 2,112,500 KH every 6 months (4 installments)",
- 
           "20% - 3,380,000 KSH (upon completion in November 2027)",
         ],
       },
