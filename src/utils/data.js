@@ -16,7 +16,9 @@ export const navLinks = [
     link: "/contact",
   },
 ];
-
+export const WALink = {
+  link: "https://wa.me/254116071190?text=Hello%20Imperia%20Consulting,%20I%20would%20like%20to%20know%20more%20about%20your%20properties.",
+};
 export const socials = [
   {
     name: "Tiktok",
@@ -33,6 +35,11 @@ export const socials = [
     icon:"pajamas:twitter",
     link: "https://x.com/imperiac_?s=11",
   },
+  {
+    name:"WhatsApp",
+    icon:"ic:baseline-whatsapp",
+    link:WALink.link,
+  }
 ];
 import { hero1, hero2, hero3, hero4 } from "../assets";
 
