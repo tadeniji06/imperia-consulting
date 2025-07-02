@@ -15,10 +15,10 @@ export const navLinks = [
 		name: "Contact Us",
 		link: "/contact",
 	},
-	// {
-	// 	name: "Blogs",
-	// 	link: "/blogs",
-	// },
+	{
+		name: "Blogs",
+		link: "/blogs",
+	},
 ];
 export const WALink = {
 	link: "https://wa.me/254116071190?text=Hello%20Imperia%20Consulting,%20I%20would%20like%20to%20know%20more%20about%20your%20properties.",
