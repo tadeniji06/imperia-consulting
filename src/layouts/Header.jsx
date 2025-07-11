@@ -12,7 +12,7 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const closeMobileMenu = () => {
+const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
 

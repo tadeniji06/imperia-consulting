@@ -10,6 +10,7 @@ import Contact from "../screens/Contact";
 import NotFound from "../screens/NotFound";
 import ViewProperty from "../components/properties/ViewProperty";
 import Blogs from "../screens/Blogs";
+import Blog from "../components/Blog";
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
 			{
 				path: "/property/:id",
 				element: <ViewProperty />,
+			},
+					{
+				path: "/blog/:slug",
+				element: <Blog />,
 			},
 			{
 				path: "/contact",
