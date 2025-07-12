@@ -4,21 +4,24 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "node server.js",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build --outDir dist/client",
+    "build:server": "vite build --ssr src/EntryServer.jsx --outDir dist/server",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "cross-env NODE_ENV=production node server.js"
   },
   "dependencies": {
     "@microsoft/clarity": "^1.0.0",
     "@portabletext/react": "^3.2.1",
     "@sanity/client": "^7.6.0",
     "@sanity/image-url": "^1.1.0",
+    "express": "^4.21.2",
     "framer-motion": "^12.23.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-helmet": "^6.1.0",
-    "react-router-dom": "^7.6.2"
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
@@ -29,6 +32,7 @@
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
     "autoprefixer": "^10.4.21",
+    "cross-env": "^7.0.3",
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",

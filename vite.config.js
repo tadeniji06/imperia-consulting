@@ -1,7 +1,23 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  define: {
+    global: 'globalThis',
+  },
+  ssr: {
+    noExternal: ["react-router-dom"],
+    target: "node"
+  },
+  optimizeDeps: {
+    include: ["react-router-dom"]
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        format: 'es'
+      }
+    }
+  }
+});

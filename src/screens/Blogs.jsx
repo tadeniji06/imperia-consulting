@@ -409,34 +409,7 @@ const Blogs = () => {
 					</div>
 				</section>
 
-				{/* Newsletter Section */}
-				<motion.section
-					initial={{ opacity: 0, y: 30 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.8 }}
-					viewport={{ once: true }}
-					className='bg-gradient-to-r from-primary-red to-red-600 py-16'
-				>
-					<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-						<h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-							Stay Updated with Market Insights
-						</h2>
-						<p className='text-xl text-red-100 mb-8'>
-							Get the latest real estate trends and investment
-							opportunities delivered to your inbox.
-						</p>
-						<div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
-							<input
-								type='email'
-								placeholder='Enter your email'
-								className='flex-1 px-6 py-4 rounded-xl border-0 focus:ring-4 focus:ring-white/20 transition-all duration-300'
-							/>
-							<button className='px-8 py-4 bg-white text-primary-red font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105'>
-								Subscribe
-							</button>
-						</div>
-					</div>
-				</motion.section>
+
 			</div>
 		</>
 	);

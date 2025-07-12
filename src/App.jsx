@@ -1,21 +1,22 @@
+import { MetaProvider } from "./utils/MetaProvider";
 import AppRoutes from "./routes/routes";
 import Announcement from "./components/ui/Announcement";
 import { useEffect } from "react";
 import Clarity from "@microsoft/clarity";
 
 const App = () => {
-	const projectId = "sc89s3h9mh";
+  const projectId = "sc89s3h9mh";
+  
+  useEffect(() => {
+    Clarity.init(projectId);
+  }, []);
 
-	useEffect(() => {
-		Clarity.init(projectId);
-	}, []);
-
-	return (
-		<>
-			<AppRoutes />
-			<Announcement />
-		</>
-	);
+  return (
+    <MetaProvider>
+      <AppRoutes />
+      <Announcement />
+    </MetaProvider>
+  );
 };
 
 export default App;
