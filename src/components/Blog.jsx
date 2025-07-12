@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import { PortableText } from "@portabletext/react";
-import { useMeta } from "../utils/MetaProvider";
+// import { useMeta } from "../utils/MetaProvider";
 import {
 	getBlogPost,
 	getRelatedPosts,
@@ -13,7 +13,7 @@ import SEO from "../utils/SEO";
 const Blog = () => {
 	const { slug } = useParams();
 	const navigate = useNavigate();
-	const { updateMeta } = useMeta();
+	// const { updateMeta } = useMeta();
 	const [post, setPost] = useState(null);
 	const [relatedPosts, setRelatedPosts] = useState([]);
 	const [loading, setLoading] = useState(true);
@@ -42,25 +42,25 @@ const Blog = () => {
 							.url()
 					: `${siteUrl}/ilogo.svg`;
 
-				updateMeta({
-					title: `${fetchedPost.title} | Imperia Consulting Blog`,
-					description:
-						fetchedPost.excerpt ||
-						fetchedPost.description ||
-						`Read about ${fetchedPost.title} on Imperia Consulting's real estate blog.`,
-					keywords: `${
-						fetchedPost.title
-					}, real estate Kenya, property investment, ${fetchedPost.categories
-						?.map((cat) => cat.title)
-						.join(", ")}`,
-					ogImage: postImage,
-					ogUrl: postUrl,
-					canonicalUrl: postUrl,
-					ogType: "article",
-					twitterCard: "summary_large_image",
-					publishedAt: fetchedPost.publishedAt,
-					isBlogPost: true,
-				});
+				// updateMeta({
+				// 	title: `${fetchedPost.title} | Imperia Consulting Blog`,
+				// 	description:
+				// 		fetchedPost.excerpt ||
+				// 		fetchedPost.description ||
+				// 		`Read about ${fetchedPost.title} on Imperia Consulting's real estate blog.`,
+				// 	keywords: `${
+				// 		fetchedPost.title
+				// 	}, real estate Kenya, property investment, ${fetchedPost.categories
+				// 		?.map((cat) => cat.title)
+				// 		.join(", ")}`,
+				// 	ogImage: postImage,
+				// 	ogUrl: postUrl,
+				// 	canonicalUrl: postUrl,
+				// 	ogType: "article",
+				// 	twitterCard: "summary_large_image",
+				// 	publishedAt: fetchedPost.publishedAt,
+				// 	isBlogPost: true,
+				// });
 
 				// Fetch related posts
 				const related = await getRelatedPosts(

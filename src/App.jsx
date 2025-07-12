@@ -1,4 +1,4 @@
-import { MetaProvider } from "./utils/MetaProvider";
+// import { MetaProvider } from "./utils/MetaProvider";
 import AppRoutes from "./routes/routes";
 import Announcement from "./components/ui/Announcement";
 import { useEffect } from "react";
@@ -12,10 +12,10 @@ const App = () => {
   }, []);
 
   return (
-    <MetaProvider>
+    <>
       <AppRoutes />
       <Announcement />
-    </MetaProvider>
+    </>
   );
 };
 

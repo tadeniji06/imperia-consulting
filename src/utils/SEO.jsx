@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useMeta } from './MetaProvider';
+// import { useMeta } from './MetaProvider';
 
 const SEO = ({
   title,
@@ -13,7 +13,7 @@ const SEO = ({
   publishedAt,
   isBlogPost = false,
 }) => {
-  const { updateMeta } = useMeta();
+  // const { updateMeta } = useMeta();
 
   const siteUrl = "https://imperiagrouponline.com";
   const defaultTitle = "Imperia Consulting | Premier Real Estate in Kenya";
@@ -135,18 +135,18 @@ const SEO = ({
     schemaScript.textContent = JSON.stringify(schema);
 
     // Update context for SSR
-    updateMeta({
-      title: finalTitle,
-      description: finalDescription,
-      keywords: finalKeywords,
-      ogImage: finalOgImage,
-      ogUrl: finalOgUrl,
-      canonicalUrl: finalCanonicalUrl,
-      ogType,
-      twitterCard,
-      publishedAt,
-      isBlogPost
-    });
+    // updateMeta({
+    //   title: finalTitle,
+    //   description: finalDescription,
+    //   keywords: finalKeywords,
+    //   ogImage: finalOgImage,
+    //   ogUrl: finalOgUrl,
+    //   canonicalUrl: finalCanonicalUrl,
+    //   ogType,
+    //   twitterCard,
+    //   publishedAt,
+    //   isBlogPost
+    // });
 
   }, [title, description, keywords, ogImage, ogUrl, canonicalUrl, ogType, twitterCard, publishedAt, isBlogPost]);
 

@@ -1,20 +1,20 @@
 import { useEffect } from "react";
 import { eme } from "../../assets";
-import { useMeta } from "../../utils/MetaProvider";
+// import { useMeta } from "../../utils/MetaProvider";
 
 const PropsHero = () => {
-  const { updateMeta } = useMeta();
+  // const { updateMeta } = useMeta();
 
-  useEffect(() => {
-    updateMeta({
-      title: 'Properties for Sale | Imperia Consulting Kenya',
-      description: 'Explore high-end apartments and residential homes in Westlands, Nairobi. Enjoy flexible 30-month installment plans with Imperia Consulting.',
-      keywords: 'Nairobi real estate, Westlands apartments, buy property Kenya, Imperia properties, Kenya housing',
-      ogImage: 'https://imperiagrouponline.com/ilogo.svg',
-      ogUrl: 'https://imperiagrouponline.com/properties',
-      canonicalUrl: 'https://imperiagrouponline.com/properties'
-    });
-  }, [updateMeta]);
+  // useEffect(() => {
+  //   updateMeta({
+  //     title: 'Properties for Sale | Imperia Consulting Kenya',
+  //     description: 'Explore high-end apartments and residential homes in Westlands, Nairobi. Enjoy flexible 30-month installment plans with Imperia Consulting.',
+  //     keywords: 'Nairobi real estate, Westlands apartments, buy property Kenya, Imperia properties, Kenya housing',
+  //     ogImage: 'https://imperiagrouponline.com/ilogo.svg',
+  //     ogUrl: 'https://imperiagrouponline.com/properties',
+  //     canonicalUrl: 'https://imperiagrouponline.com/properties'
+  //   });
+  // }, [updateMeta]);
 
   return (
     <div className='relative'>
