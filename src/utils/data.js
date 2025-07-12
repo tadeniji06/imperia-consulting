@@ -102,7 +102,7 @@ We offer flexible payment structures that fit your lifestyle, allowing you to sp
 	{
 		title: "Properties with high ROI (12% p.a)",
 		icon: "icon-park-solid:transfer",
-		desc: `Our properties are strategically located to deliver consistent capital appreciation, with up to 12% annual return on investment, making your purchase not just a home, but a smart wealth-building asset.
+		desc: `Our properties are strategically located to deliver consistent capital appreciation, with up to 12% in annual return on investment, making your purchase not just a home, but a smart wealth-building asset.
 
 `,
 	},
