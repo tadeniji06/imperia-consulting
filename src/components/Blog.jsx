@@ -389,7 +389,7 @@ const Blog = () => {
 						)}
 
 						{/* Share buttons */}
-						<div className='mt-8 pt-8 border-t border-gray-200'>
+						{/* <div className='mt-8 pt-8 border-t border-gray-200'>
 							<h3 className='text-lg font-semibold text-gray-900 mb-4'>
 								Share this article
 							</h3>
@@ -445,7 +445,7 @@ const Blog = () => {
 									<span>Copy Link</span>
 								</button>
 							</div>
-						</div>
+						</div> */}
 					</div>
 
 					{/* Related Posts */}
